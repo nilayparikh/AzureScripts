@@ -82,8 +82,14 @@ try
 		exit;
 	}
 
+	$autoUpgradeMV = $false;
+	if($AutoUpgradeMinorVersion)
+	{
+		$autoUpgradeMV = $true;
+	}
+
 	# Run incremental provision
-	$scaleSet = Add-AzureRmVmssExtension -VirtualMachineScaleSet $scaleSet -Name $VMExtentionName -Publisher "Microsoft.EnterpriseCloud.Monitoring" -Type "MicrosoftMonitoringAgent" -TypeHandlerVersion $typeHandlerVerMjandMn -AutoUpgradeMinorVersion $AutoUpgradeMinorVersion -Setting $setting -ProtectedSetting $protectedSetting;
+	$scaleSet = Add-AzureRmVmssExtension -VirtualMachineScaleSet $scaleSet -Name $VMExtentionName -Publisher "Microsoft.EnterpriseCloud.Monitoring" -Type "MicrosoftMonitoringAgent" -TypeHandlerVersion $typeHandlerVerMjandMn -AutoUpgradeMinorVersion $autoUpgradeMV -Setting $setting -ProtectedSetting $protectedSetting;
 	Update-AzureRmVmss -ResourceGroupName $ResourceGroupName -Name $VMScaleSetName -VirtualMachineScaleSet $scaleSet
 
 	Write-Host "MicrosoftMonitoringAgent successfully applied to VM Scale Set. ";
