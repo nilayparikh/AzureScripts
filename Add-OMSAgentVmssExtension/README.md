@@ -2,7 +2,7 @@
 
 This script would install **Microsoft Monitoring Agent** on **Service Fabric Nodes** or **VM Scale Sets** in the cloud or the hybrid infrastructure to OMS Workspace. Microsoft Monitoring Agent (MMA) enables rich and real-time analytics for operational data (Logs, Performance, Alerts and Inventory) from a tenant.
 
-Please refer [Deploy Microsoft Monitoring Agent using Azure RM PowerShell (-AzureRmVmss*) for Service Fabric Cluster or VM Scale Sets.](https://blog.nilayparikh.com/azure/service-management/guide-set-up-microsoft-monitoring-agent-on-service-fabric-and-vm-scale-sets-for-improved-operational-insight/#setup-microsoft-monitoring-agent-using-powershell). for more details.
+Please refer, [Deploy Microsoft Monitoring Agent using Azure RM PowerShell (-AzureRmVmss*) for Service Fabric Cluster or VM Scale Sets](https://blog.nilayparikh.com/azure/service-management/guide-set-up-microsoft-monitoring-agent-on-service-fabric-and-vm-scale-sets-for-improved-operational-insight/#setup-microsoft-monitoring-agent-using-powershell) for more details.
 
 The script simplifies the Microsoft Monitoring Agent deployment to Virtual Machine Scale Set and Service Fabric Cluster.
 
